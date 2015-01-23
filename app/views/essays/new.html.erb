@@ -1,0 +1,27 @@
+<h1>New Essay</h1>
+
+<form action='/essays/save' method='post'>
+
+  <input type='hidden' 
+         name='authenticity_token'
+         value='<%= form_authenticity_token %>'>
+
+  
+  Title:<br>
+  <input type='text' name='title' />
+  <br><br>
+
+
+  Content:<br>
+  <textarea name='content' rows='8'></textarea>
+  <br><br>
+
+
+  Published?
+  <input type='checkbox' name='published' value='1'>
+  <br><br>
+
+
+  <input type='submit'>
+
+</form>

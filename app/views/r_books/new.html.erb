@@ -1,0 +1,33 @@
+<h1>New Book (r) </h1>
+
+<%= form_for @r_book do |f| %>
+
+  Title:<br>
+  <%= f.text_field :title %>
+  <br><br>
+
+  Content:<br>
+  <%= f.text_area :content, rows: 8 %>
+  <br><br>
+
+  Published?
+  <%= f.check_box :published %>
+  <br><br>
+
+  Tags:<br>
+  <%= text_field_tag 'r_book[tag_list][]' %>
+  <%= text_field_tag 'r_book[tag_list][]' %>
+  <%= text_field_tag 'r_book[tag_list][]' %>
+  <br><br>
+
+  Pricing:<br>
+  <%= f.fields_for :price_data do |pf| %>
+    Ebook: <%= pf.text_field :ebook %> <br>
+    Audio: <%= pf.text_field :audio %> <br>
+    Paper: <%= pf.text_field :paper %> <br>
+  <% end %>
+  <br><br>
+  
+  <%= f.submit %>
+
+<% end %>

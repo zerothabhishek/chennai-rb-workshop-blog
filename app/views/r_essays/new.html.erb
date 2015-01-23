@@ -1,0 +1,19 @@
+<h1>New Essay (r)</h1>
+
+<%= form_tag '/r_essays' %>
+
+  Title:<br>
+  <%= text_field_tag :title %>
+  <br><br>
+
+  Content:<br>
+  <%= text_area_tag :content, nil, rows: 8 %>
+  <br><br>
+
+  Published?
+  <%= check_box_tag :published %>
+  <br><br>
+
+  <%= submit_tag %>
+
+</form>

@@ -1,0 +1,41 @@
+<h1>New Book</h1>
+
+<form action='/books/save' method='post'>
+
+  <input type='hidden' 
+         name='authenticity_token'
+         value='<%= form_authenticity_token %>'>
+
+  
+  Title:<br>
+  <input type='text' name='title' />
+  <br><br>
+
+
+  Content:<br>
+  <textarea name='content' rows='8'></textarea>
+  <br><br>
+
+
+  Published?
+  <input type='checkbox' name='published' value='1'>
+  <br><br>
+
+
+  Tags:<br>
+  <input type='text' name='tags[]' />
+  <input type='text' name='tags[]' />
+  <input type='text' name='tags[]' />
+  <br><br>
+
+
+  Pricing:<br>
+  Ebook: <input type='text' name='pricing[ebook]' /><br>
+  Audio: <input type='text' name='pricing[audio]' /><br>
+  Paper: <input type='text' name='pricing[paper]' /><br>
+  <br><br>
+
+
+  <input type='submit'>
+
+</form>
